@@ -5,6 +5,62 @@
 
      <title>hello </title>
  <style>
+	 body {
+  width: 100%;
+  height: 100%;
+  background: #fd746c;
+  background: linear-gradient(to left, #fd746c , #ff9068);      
+}
+
+.wrapper {
+  position: relative;
+  width: 640px;
+  margin: 50px auto;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  width: 160px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  border: 1px dashed rgba(255,255,255, 0);
+  color: #fff;
+  padding: 10px 0 10px 0;
+  margin: -1px -5px -1px -1px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+nav ul li:hover {
+  background: rgba(255,255,255,.1);
+}
+
+nav ul {
+  border: 1px solid #fff;
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  z-index: 100;
+}
+
+nav div {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  background: #fff;
+  width: 162px;
+  height: 40px;
+  z-index:99;
+}
+
+.active {
+  color: tomato;
+}
     h1{
       color: black;
       text-align: center;
@@ -69,9 +125,30 @@
 		
 	}
 </style>
+	<script>
+		$("nav ul li").click(function() {
+  var data = $(this).data("dedata");
+  
+  $("nav div").stop().animate({marginLeft:data}, 500, "easeInOutExpo");
+  
+  $(this).addClass("active");
+  
+  $("nav ul li").not(this).removeClass("active");
+});
+	</script>
 </head>
 <body>
-
+<div class="wrapper">
+  <nav>
+    <div></div>
+    <ul>
+      <li data-dedata="0px" class="active">Home</li>
+      <li data-dedata="160px">About</li>
+      <li data-dedata="320px">Contact</li>
+      <li data-dedata="480px">News</li>
+    </ul>
+  </nav>
+</div>
     <h1>Welcome to the world of happiness
     </h1>
 <div>
