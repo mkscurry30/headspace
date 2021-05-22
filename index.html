@@ -5,11 +5,22 @@
 
      <title>hello </title>
  <style>
-	 body {
-  width: 100%;
-  height: 100%;
-  background: #fd746c;
-  background: linear-gradient(to left, #fd746c , #ff9068);      
+    h1{
+      color: black;
+      text-align: center;
+    }
+
+    body{
+	text-align:center;
+  	background-image: url('happy.jpg');
+  	background-repeat: no-repeat;
+	background-attachment: fixed;
+ 	background-size: 100% 100%;
+	background-align:center;
+  	width: 100%;
+  	height: 100%;
+  	background: #fd746c;
+  	background: linear-gradient(to left, #fd746c , #ff9068);      
 }
 
 .wrapper {
@@ -61,18 +72,6 @@ nav div {
 .active {
   color: tomato;
 }
-    h1{
-      color: black;
-      text-align: center;
-    }
-
-    body{
-	text-align:center;
-  	background-image: url('happy.jpg');
-  	background-repeat: no-repeat;
-	background-attachment: fixed;
- 	background-size: 100% 100%;
-	background-align:center;
 	}
 	.flex-container {
   display: flex;
@@ -80,7 +79,15 @@ nav div {
 
 }
 
-
+	div{
+	 background:pink;
+			
+	}
+	div.main{
+	 background:light blue;
+		
+		
+	}
 
        div.first{
 		border-radius: 25px;
@@ -125,39 +132,34 @@ nav div {
 		
 	}
 </style>
-	<script>
-		$("nav ul li").click(function() {
-  var data = $(this).data("dedata");
-  
-  $("nav div").stop().animate({marginLeft:data}, 500, "easeInOutExpo");
-  
-  $(this).addClass("active");
-  
-  $("nav ul li").not(this).removeClass("active");
-});
-	</script>
 </head>
 <body>
+
 <div class="wrapper">
   <nav>
     <div></div>
     <ul>
-      <li data-dedata="0px" class="active">Home</li>
-      <li data-dedata="160px">About</li>
+      <li data-dedata="0px" class="active">
+      <a href ="index.html">	Home	
+      </a>
+      </li>
+      <li data-dedata="160px">
+      <a href = "https://www.drawasaurus.org/">	Activity	
+      </a>
+      </li>
       <li data-dedata="320px">Contact</li>
       <li data-dedata="480px">News</li>
     </ul>
   </nav>
 </div>
-    <h1>Welcome to the world of happiness
-    </h1>
+<br><br><br><br><br><br> 
 <div>
      <div class="first">
 	<br>
         <a href ="https://meet.jit.si/ArbitraryInsidersRuleProperly">
-	<img alt="meeting" src="meeting.jpg">
+		<img alt="meeting" src="meeting.jpg">
 	
-	</a>
+		</a>
 
 	<div class="first_sub">
 		Meet new people and experience new style of world
@@ -176,16 +178,33 @@ nav div {
 	</div>
     </div>
 </div> 
+</div> 
 	<div style="position: relative; width: 100%; height: 0; padding-top: 48.1481%;
- padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
+ 	padding-bottom: 48px; 
+ 	box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
+ 	margin-top: 1.6em; 
+ 	margin-bottom: 0.9em; 
+ 	overflow: hidden;
+ 	border-radius: 8px; 
+ 	will-change: transform;">
   <iframe style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
     src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEfNRTaqaU&#x2F;view?embed">
   </iframe>
 </div>
-<iframe allow="camera; microphone; fullscreen; display-capture"
-	src="https://meet.jit.si/ArbitraryInsidersRuleProperly"
-	style="height:50%; width: 50%; border: 0px;">
+	<iframe allow="camera; microphone; fullscreen; display-capture"
+		src="https://meet.jit.si/ArbitraryInsidersRuleProperly"
+		style="height:50%; width: 50%; border: 0px;">
 	</iframe>
+<script language ="javascript">
+$("nav ul li").click(function() {
+  var data = $(this).data("dedata");
+  
+  $("nav div").stop().animate({marginLeft:data}, 500, "easeInOutExpo");
+  
+  $(this).addClass("active");
+  
+  $("nav ul li").not(this).removeClass("active");
+});
+</script>
 </body>
 </html>
