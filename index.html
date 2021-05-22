@@ -1,210 +1,141 @@
 <! DOCTYPE html>
 <html lang="en">
-<head>
-<meta name ="view point" content="initial-scale=1 , width=device-width">
-
-     <title>hello </title>
- <style>
-    h1{
-      color: black;
-      text-align: center;
-    }
-
-    body{
-	text-align:center;
-  	background-image: url('happy.jpg');
-  	background-repeat: no-repeat;
-	background-attachment: fixed;
- 	background-size: 100% 100%;
-	background-align:center;
-  	width: 100%;
-  	height: 100%;
-  	background: #fd746c;
-  	background: linear-gradient(to left, #fd746c , #ff9068);      
+   <head>
+      <meta name ="view point" content="initial-scale=1 , width=device-width">
+      <title>Headspace </title>
+      <style>
+          html {
+  scroll-behavior: smooth;
+}
+         body{
+            margin: 0px;
+                padding: 0px;
+                margin-top: 0px;
+                padding-top: 0px;
+                width: 100%;
+                height: 100%;
+         background: #fd746c;
+         background: linear-gradient(to left, #fd746c , #ff9068);      
+         }
+         
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
 
-.wrapper {
-  position: relative;
-  width: 640px;
-  margin: 50px auto;
-}
+ #navbar ul { 
+         display: flex;
+	margin: 0; 
+	padding: 30px; 
+	list-style-type: none; 
+	text-align: center; 
+	background-color: #fd746c; 
+	} 
+ 
+#navbar ul li {  
+	 width: 100%;
+     font-family: Helvetica, sans-serif;
+     border: 1px dashed rgba(255,255,255, 0);
+	} 
+ 
+#navbar ul li a { 
+	text-decoration: none; 
+	padding: 5% 30%; 
+	color: #fff; 
+	background-color: #F5737F; 
+	} 
+ 
+#navbar ul li a:hover { 
+	color: #fff; 
+	background-color: rgba(255,255,255,.1); 
+	} 
+ 
+         .active {
+         color: tomato;
+         }
+         
+         .flex-container {
+         display: flex;
+         flex-wrap: nowrap;
+         }
+         div{
+         background:pink;
+         }
+         div.main{
+         background:light blue;
+         }
+         div.first{
+         border-radius: 25px;
+         font-size:20;
+         align-text=left;
+         width: 300px;
+         /* border: 6px solid black;*/
+         background-color=lightblue;
+         margin-left: 100px;		
+         background:white;
+         }
+         div.first_sub{
+         border-radius: 25px;
+         font-size:30;
+         color:black;
+         width:300px;
+         margin-top:10px;
+         background:white;
+         }
+         div.second {
+         border-radius: 25px;
+         font-size:20;
+         align-text=left;
+         width:300px;
+         /*border: 6px solid black;*/
+         margin-left: 400px;
+         background:white;
+         }
+         div.second_sub{
+         border-radius: 25px;
+         font-size:30;
+         color:black;
+         width:300px;
+         margin-top:10px;
+         background:white;
 
-nav {
-  width: 100%;
-}
+         }
 
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  width: 160px;
-  text-align: center;
-  font-family: Helvetica, sans-serif;
-  border: 1px dashed rgba(255,255,255, 0);
-  color: #fff;
-  padding: 10px 0 10px 0;
-  margin: -1px -5px -1px -1px;
-  cursor: pointer;
-  transition: all .2s;
-}
+                section.active {
+                visibility: visible;
+                scroll-snap-align: start;
+        }
+         
+      </style>
 
-nav ul li:hover {
-  background: rgba(255,255,255,.1);
-}
-
-nav ul {
-  border: 1px solid #fff;
-  position: absolute;
-  width: 100%;
-  padding: 0;
-  z-index: 100;
-}
-
-nav div {
-  position: absolute;
-  left: 0;
-  top: 16px;
-  background: #fff;
-  width: 162px;
-  height: 40px;
-  z-index:99;
-}
-
-.active {
-  color: tomato;
-}
-	}
-	.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-
-}
-
-	div{
-	 background:pink;
-			
-	}
-	div.main{
-	 background:light blue;
-		
-		
-	}
-
-       div.first{
-		border-radius: 25px;
-        	font-size:20;
-		align-text=left;
-        	width: 300px;
-      		/* border: 6px solid black;*/
-  		background-color=lightblue;
-  		margin-left: 100px;		
-  		background:white;
- 		
-
-    }
-	div.first_sub{
-		border-radius: 25px;
-		font-size:30;
-		color:black;
-		width:300px;
-		margin-top:10px;
-		background:white;
-	
-	}
-   	 div.second {
-		border-radius: 25px;
-    		font-size:20;
-		align-text=left;
-        	width:300px;
-		/*border: 6px solid black;*/
-  		margin-left: 400px;
-		background:white;
-	
-    }
-	div.second_sub{
-		border-radius: 25px;
-		font-size:30;
-		color:black;
-		width:300px;
-		margin-top:10px;
-		background:white;
-	
-		
-		
-	}
-</style>
-</head>
-<body>
-
-<div class="wrapper">
-  <nav>
-    <div></div>
-    <ul>
-      <li data-dedata="0px" class="active">
-      <a href ="index.html">	Home	
-      </a>
-      </li>
-      <li data-dedata="160px">
-      <a href = "https://www.drawasaurus.org/">	Activity	
-      </a>
-      </li>
-      <li data-dedata="320px">Contact</li>
-      <li data-dedata="480px">News</li>
-    </ul>
-  </nav>
-</div>
-<br><br><br><br><br><br> 
-<div>
-     <div class="first">
-	<br>
-        <a href ="https://meet.jit.si/ArbitraryInsidersRuleProperly">
-		<img alt="meeting" src="meeting.jpg">
-	
-		</a>
-
-	<div class="first_sub">
-		Meet new people and experience new style of world
-	</div>
-	</div>
-             
-<div/>		
-<div class="main">
-    <div class="second">
-	<br>
-        <a href = "https://www.drawasaurus.org/">
-	<img alt="pictionary" src="picture.jpg">
-	</a>
-	<div class="second_sub">
-		Play the Game of Pictionary
-	</div>
-    </div>
-</div> 
-</div> 
-	<div style="position: relative; width: 100%; height: 0; padding-top: 48.1481%;
- 	padding-bottom: 48px; 
- 	box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); 
- 	margin-top: 1.6em; 
- 	margin-bottom: 0.9em; 
- 	overflow: hidden;
- 	border-radius: 8px; 
- 	will-change: transform;">
-  <iframe style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEfNRTaqaU&#x2F;view?embed">
-  </iframe>
-</div>
-	<iframe allow="camera; microphone; fullscreen; display-capture"
-		src="https://meet.jit.si/ArbitraryInsidersRuleProperly"
-		style="height:50%; width: 50%; border: 0px;">
-	</iframe>
-<script language ="javascript">
-$("nav ul li").click(function() {
-  var data = $(this).data("dedata");
-  
-  $("nav div").stop().animate({marginLeft:data}, 500, "easeInOutExpo");
-  
-  $(this).addClass("active");
-  
-  $("nav ul li").not(this).removeClass("active");
-});
-</script>
-</body>
+   </head>
+   <body>
+    
+        <div id="navbar"> 
+            <ul> 
+              <li><a href="#one">Home</a></li> 
+              <li><a href="#two">About</a></li> 
+              <li><a href="http://github.com">Link 3</a></li> 
+              <li><a href="http://github.com">Link 4</a></li> 
+              <li><a href="http://github.com">Link 5</a></li> 
+            </ul> 
+          </div> 
+          <br><br><br><br><br><br>
+          <section id="one" class="active">
+            <br><br><br><br>
+            <img src="HEADSAPCE.svg" alt="Italian Trulli" width=100%>
+      </section>
+      <section id="two">
+        <br><br><br><br>
+            <img src="HEADSAPCE2.svg" alt="Italian Trulli" width=100%>
+        </section>
+      <br><br><br><br><br><br> 
+      <iframe allow="camera; microphone; fullscreen; display-capture"
+         src="https://meet.jit.si/ArbitraryInsidersRuleProperly"
+         style="height:50%; width: 50%; border: 0px;">
+      </iframe>
+   </body>
 </html>
